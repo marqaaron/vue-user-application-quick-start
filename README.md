@@ -52,6 +52,20 @@ a starting point for rapid production-grade prototyping:
 7. Install application's dependencies: `npm install`
 8. Serve up the application with hot reload at localhost:8080: `npm run dev`
 
+NOTE:  If you get an error about an unexpected token such as `...mapGetters` do the following:
+1. Install the `babel-preset-stage-3`
+```$xslt
+npm install babel-preset-stage-3 --save-dev
+```
+2. Ensure you have a `.babelrc` file in your project root with the following contents:
+```$xslt
+{
+  "presets": [
+    ["env", { "modules": false }],
+    "stage-3"
+  ]
+}
+
 ### Build for Prototype Production
 
 ```
